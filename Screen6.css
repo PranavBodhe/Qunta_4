@@ -1,9 +1,8 @@
+
 :root {
-    --bg-dark: #ffffff;
-    --bg-darker: #f8f9fa;
-    --bg-card: #ffffff;
-    --text-primary: #212529;
-    --text-secondary: #6c757d;
+    background-image: linear-gradient(43deg, #3c54c0 0%, #aa42a1 46%, #a58549 100%);
+    --text-primary: #1d2124;
+    --text-secondary: #fafafa;
     --text-muted: #adb5bd;
     --border-color: #dee2e6;
     --border-light: #ced4da;
@@ -19,12 +18,13 @@
     --border-radius-lg: 12px;
     --spacing-xs: 4px;
     --spacing-sm: 8px;
-    --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
     --spacing-xxl: 48px;
+    
 }
 
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -39,6 +39,7 @@ body {
     min-height: 100vh;
 }
 
+/* Navigation Header */
 .navbar {
     background-color: var(--bg-darker);
     border-bottom: 1px solid var(--border-color);
@@ -95,6 +96,7 @@ body {
     color: var(--text-primary);
 }
 
+/* Filter Section */
 .filter-section {
     background-color: var(--bg-darker);
     padding: var(--spacing-lg) 0;
@@ -144,10 +146,12 @@ body {
     pointer-events: none;
 }
 
+/* Main Content */
 .main-content {
     padding: var(--spacing-xl) 0;
 }
 
+/* Requests Grid */
 .requests-grid {
     display: grid;
     gap: var(--spacing-lg);
@@ -348,6 +352,7 @@ body {
     transform: translateY(-1px);
 }
 
+/* Pagination */
 .pagination-section {
     display: flex;
     justify-content: center;
@@ -392,6 +397,7 @@ body {
     cursor: not-allowed;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 var(--spacing-md);
@@ -467,6 +473,7 @@ body {
     }
 }
 
+/* Focus states for accessibility */
 .nav-link:focus,
 .filter-select:focus,
 .action-btn:focus,
@@ -475,6 +482,7 @@ body {
     outline-offset: 2px;
 }
 
+/* Smooth transitions */
 * {
     transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }

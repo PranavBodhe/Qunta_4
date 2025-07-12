@@ -66,3 +66,24 @@ function look(ele) {
         cnps.style.borderColor='green';
     }
 }
+
+
+function validateLogin(e) {
+    e.preventDefault(); // Prevent form from submitting
+
+    const password = document.getElementById('password').value;
+
+    if (password !== 'admin123') {
+      const popup = document.getElementById('popup');
+      popup.classList.add('show');
+
+      setTimeout(() => {
+        popup.classList.remove('show');
+      }, 3000);
+
+      return false;
+    }
+
+    alert("Login Successful!");
+    return true;
+  }

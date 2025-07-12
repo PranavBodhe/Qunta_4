@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-
+        
         <!-- ✅ LOGIN FORM -->
         <form method="POST" action="login.php">
             <div class="form-box">
@@ -80,6 +80,30 @@
             </div>
         </form>
     </div>
+    
+<div class="login-box">
+  <!-- Popup message -->
+  <div class="popup" id="popup">⚠️ Password is incorrect</div>
+
+  <h2>LOGIN</h2>
+  <form onsubmit="return validateLogin(event)">
+    <input type="text" id="username" placeholder="username" required>
+    <input type="password" id="password" placeholder="password" required>
+
+    <div class="remember-forgot">
+      <label><input type="checkbox"> Remember me</label>
+      <a href="#">Forgot password</a>
+    </div>
+
+    <button type="submit">Login</button>
+
+    <div class="register-link">
+      Don't have an account? <a href="#">Register</a>
+    </div>
+  </form>
+</div>
+
+
 
     <script src="script.js"></script>
 </body>

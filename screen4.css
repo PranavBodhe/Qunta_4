@@ -1,4 +1,3 @@
-/* CSS Variables for consistent theming */
 :root {
     --bg-dark: #ffffff;
     --bg-darker: #f2f2f2;
@@ -18,7 +17,6 @@
     --spacing-xxl: 48px;
 }
 
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +31,6 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation Header */
 .navbar {
     background-color: var(--bg-darker);
     border-bottom: 1px solid var(--border-color);
@@ -90,7 +87,6 @@ body {
     color: var(--text-primary);
 }
 
-/* Main Content */
 .main-content {
     flex: 1;
     padding: var(--spacing-xl) 0;
@@ -102,7 +98,6 @@ body {
     padding: 0 var(--spacing-lg);
 }
 
-/* Profile Section */
 .profile-section {
     background-color: var(--bg-darker);
     border: 1px solid var(--border-color);
@@ -144,7 +139,6 @@ body {
     color: var(--text-primary);
 }
 
-/* Skills Container */
 .skills-container {
     display: grid;
     gap: var(--spacing-lg);
@@ -169,7 +163,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Profile Photo */
 .profile-photo-container {
     display: flex;
     justify-content: center;
@@ -195,7 +188,6 @@ body {
     font-weight: 400;
 }
 
-/* Feedback Section */
 .feedback-section {
     background-color: var(--bg-darker);
     border: 1px solid var(--border-color);
@@ -218,7 +210,6 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 var(--spacing-md);
@@ -294,7 +285,6 @@ body {
     }
 }
 
-/* Hover and Interactive States */
 .skills-content:hover,
 .feedback-content:hover {
     border-color: rgba(255, 255, 255, 0.2);
@@ -302,14 +292,12 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Focus states for accessibility */
 .request-btn:focus,
 .nav-link:focus {
     outline: 2px solid var(--accent-teal);
     outline-offset: 2px;
 }
 
-/* Smooth transitions */
 * {
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }

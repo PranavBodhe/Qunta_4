@@ -86,7 +86,7 @@
                         </div>
                     </div>
                     <div class="card-actions">
-                        <button class="request-btn">Request</button>
+                        <a href="screen4.html"><button class="request-btn">Request</button></a>
                     </div>
                 </div>
 
@@ -205,14 +205,7 @@
             }
         });
 
-        // Request button functionality
-        document.querySelectorAll('.request-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const userName = this.closest('.user-card').querySelector('.user-name').textContent;
-                alert(`Request sent to ${userName}!`);
-            });
-        });
-
+       
         // Pagination functionality
         document.querySelectorAll('.page-number').forEach(btn => {
             btn.addEventListener('click', function() {

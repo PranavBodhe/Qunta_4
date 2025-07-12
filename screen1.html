@@ -3,9 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home page</title>
+    <title>User Listing - Skill Swap Platform</title>
+    <link rel="stylesheet" href="screen1.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Skill Swap Platform</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="start.html"><button class="login-btn">Login</button></a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <div class="availability-filter">
+                    <select id="availabilityFilter" class="filter-select">
+                        <option value="">Availability</option>
+                        <option value="online">Online</option>
+                        <option value="offline">Offline</option>
+                        <option value="busy">Busy</option>
+                    </select>
+                    <i class="fas fa-chevron-down select-icon"></i>
+                </div>
+                <div class="search-input-container">
+                    <input type="text" class="search-input" placeholder="Search users, skills..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- User Cards -->
+            <section class="user-grid">
+                <!-- User Card 1 - Marc Demo -->
+                <div class="user-card">
+                    <div class="user-profile">
+                        <div class="profile-photo">
+                            <span class="photo-placeholder">Profile Photo</span>
+                        </div>
+                        <div class="user-info">
+                            <h3 class="user-name">Marc Demo</h3>
+                            <div class="skills-section">
+                                <div class="skills-row">
+                                    <span class="skills-label">Skills offered:</span>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">Web Design</span>
+                                        <span class="skill-tag">CSS</span>
+                                    </div>
+                                </div>
+                                <div class="skills-row">
+                                    <span class="skills-label">Skills wanted:</span>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">PHP</span>
+                                        <span class="skill-tag">React Native</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="rating-text">Rating:</span>
+                                <span class="rating-value">3.4/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="request-btn">Request</button>
+                    </div>
+                </div>
+
+                <!-- User Card 2 - Michell -->
+                <div class="user-card">
+                    <div class="user-profile">
+                        <div class="profile-photo">
+                            <span class="photo-placeholder">Profile Photo</span>
+                        </div>
+                        <div class="user-info">
+                            <h3 class="user-name">Michell</h3>
+                            <div class="skills-section">
+                                <div class="skills-row">
+                                    <span class="skills-label">Skills offered:</span>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">Java Script</span>
+                                        <span class="skill-tag">UX</span>
+                                    </div>
+                                </div>
+                                <div class="skills-row">
+                                    <span class="skills-label">Skills wanted:</span>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">PHP</span>
+                                        <span class="skill-tag">Graphic Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="rating-text">Rating:</span>
+                                <span class="rating-value">2.5/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="request-btn">Request</button>
+                    </div>
+                </div>
+
+                <!-- User Card 3 - Joe Wills -->
+                <div class="user-card">
+                    <div class="user-profile">
+                        <div class="profile-photo">
+                            <span class="photo-placeholder">Profile Photo</span>
+                        </div>
+                        <div class="user-info">
+                            <h3 class="user-name">Joe Wills</h3>
+                            <div class="skills-section">
+                                <div class="skills-row">
+                                    <span class="skills-label">Skills offered:</span>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">Java Script</span>
+                                        <span class="skill-tag">UX</span>
+                                    </div>
+                                </div>
+                                <div class="skills-row">
+                                    <span class="skills-label">Skills wanted:</span>
+                                    <div class="skills-tags">
+                                        <span class="skill-tag">PHP</span>
+                                        <span class="skill-tag">Graphic Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class="rating-text">Rating:</span>
+                                <span class="rating-value">4.0/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button class="request-btn">Request</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <section class="pagination-section">
+                <div class="pagination">
+                    <button class="page-btn page-prev" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="page-btn page-number active">1</button>
+                    <button class="page-btn page-number">2</button>
+                    <button class="page-btn page-number">3</button>
+                    <button class="page-btn page-number">4</button>
+                    <button class="page-btn page-number">5</button>
+                    <button class="page-btn page-number">6</button>
+                    <button class="page-btn page-number">7</button>
+                    <button class="page-btn page-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Search functionality
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            const searchTerm = document.getElementById('searchInput').value;
+            const availability = document.getElementById('availabilityFilter').value;
+            
+            console.log('Searching for:', searchTerm);
+            console.log('Availability filter:', availability);
+            
+            // Here you would implement the actual search functionality
+            // For now, we'll just show an alert
+            if (searchTerm || availability) {
+                alert(`Searching for: "${searchTerm}" with availability: "${availability}"`);
+            }
+        });
+
+        // Enter key search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('searchBtn').click();
+            }
+        });
+
+        // Request button functionality
+        document.querySelectorAll('.request-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const userName = this.closest('.user-card').querySelector('.user-name').textContent;
+                alert(`Request sent to ${userName}!`);
+            });
+        });
+
+        // Pagination functionality
+        document.querySelectorAll('.page-number').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all page numbers
+                document.querySelectorAll('.page-number').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const pageNumber = this.textContent;
+                console.log('Navigating to page:', pageNumber);
+            });
+        });
+
+        // Previous/Next pagination
+        document.querySelector('.page-prev').addEventListener('click', function() {
+            const currentActive = document.querySelector('.page-number.active');
+            const prevPage = currentActive.previousElementSibling;
+            if (prevPage && prevPage.classList.contains('page-number')) {
+                currentActive.classList.remove('active');
+                prevPage.classList.add('active');
+            }
+        });
+
+        document.querySelector('.page-next').addEventListener('click', function() {
+            const currentActive = document.querySelector('.page-number.active');
+            const nextPage = currentActive.nextElementSibling;
+            if (nextPage && nextPage.classList.contains('page-number')) {
+                currentActive.classList.remove('active');
+                nextPage.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>

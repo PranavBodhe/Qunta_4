@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="screen3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="header">
+                <h1 class="title">User profile</h1>
+                <div class="nav-buttons">
+                    <button class="nav-btn save-btn" id="saveBtn">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                    <button class="nav-btn discard-btn" id="discardBtn">
+                        <i class="fas fa-times"></i> Discard
+                    </button>
+                    <button class="nav-btn swap-btn" id="swapBtn">
+                        <i class="fas fa-exchange-alt"></i> Swap request
+                    </button>
+                    <button class="nav-btn home-btn" id="homeBtn">
+                        <i class="fas fa-home"></i> Home
+                    </button>
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name">
+                    </div>
+                    <div class="profile-photo-section">
+                        <div class="profile-photo-container">
+                            <div class="profile-photo-placeholder" id="profilePhoto">
+                                <span class="photo-text">Profile Photo</span>
+                                <span class="photo-action">Add/Edit Review</span>
+                            </div>
+                            <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" class="form-input" placeholder="Enter your location">
+                </div>
+
+                <div class="skills-row">
+                    <div class="skills-section">
+                        <label>Skills Offered</label>
+                        <div class="skills-container" id="skillsOffered">
+                            <div class="skill-tag">
+                                <span>Graphic Design</span>
+                                <button class="remove-skill">&times;</button>
+                            </div>
+                            <div class="skill-tag">
+                                <span>Web Design</span>
+                                <button class="remove-skill">&times;</button>
+                            </div>
+                            <div class="skill-tag">
+                                <span>Marketing</span>
+                                <button class="remove-skill">&times;</button>
+                            </div>
+                        </div>
+                        <input type="text" class="skill-input" id="skillOfferedInput" placeholder="Add a skill...">
+                    </div>
+
+                    <div class="skills-section">
+                        <label>Skills wanted</label>
+                        <div class="skills-container" id="skillsWanted">
+                            <div class="skill-tag">
+                                <span>Python</span>
+                                <button class="remove-skill">&times;</button>
+                            </div>
+                            <div class="skill-tag">
+                                <span>Java Script</span>
+                                <button class="remove-skill">&times;</button>
+                            </div>
+                            <div class="skill-tag">
+                                <span>Manager</span>
+                                <button class="remove-skill">&times;</button>
+                            </div>
+                        </div>
+                        <input type="text" class="skill-input" id="skillWantedInput" placeholder="Add a skill...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Availability</label>
+                    <select id="availability" name="availability" class="form-select">
+                        <option value="weekends" selected>weekends</option>
+                        <option value="weekdays">weekdays</option>
+                        <option value="evenings">evenings</option>
+                        <option value="flexible">flexible</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-visibility">Profile</label>
+                    <select id="profile-visibility" name="profile-visibility" class="form-select">
+                        <option value="public" selected>Public</option>
+                        <option value="private">Private</option>
+                        <option value="friends">Friends Only</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

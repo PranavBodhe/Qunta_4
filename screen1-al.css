@@ -38,7 +38,7 @@ body {
 
 /* Navigation Header */
 .navbar {
-    background-color: var(--bg-darker);
+    background-image: linear-gradient(50deg, #283a95 0%, #9d3f95 46%, #b48b3f 100%);
     border-bottom: 1px solid var(--border-color);
     padding: var(--spacing-md) 0;
     position: sticky;

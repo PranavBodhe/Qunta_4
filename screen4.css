@@ -32,7 +32,7 @@ body {
 }
 
 .navbar {
-    background-color: var(--bg-darker);
+    background-image: linear-gradient(50deg, #283a95 0%, #9d3f95 46%, #b48b3f 100%);
     border-bottom: 1px solid var(--border-color);
     padding: var(--spacing-md) 0;
     position: sticky;
@@ -48,11 +48,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-.nav-brand h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
+.nav-brand img{
+    width: 8vw;
+    height: auto;
 }
 
 .nav-menu {

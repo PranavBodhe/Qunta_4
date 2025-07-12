@@ -23,13 +23,11 @@ if ($result->num_rows > 0) {
   $user = $result->fetch_assoc();
   
   if (password_verify($password_input, $user['password'])) {
-    // ✅ Redirect to home page
     header("Location: screen1afterlog.html");
     exit;
   } else {
     echo "❌ Incorrect password!";
   }
-
 } else {
   echo "❌ User not found!";
 }

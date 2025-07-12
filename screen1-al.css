@@ -1,4 +1,3 @@
-/* CSS Variables for consistent theming */
 :root {
     background-image: linear-gradient(43deg, #3c54c0 0%, #aa42a1 46%, #a58549 100%);
     --text-primary: #ffffff;
@@ -20,8 +19,6 @@
     --spacing-xxl: 48px;
 }
 
-
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +33,6 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation Header */
 .navbar {
     background-image: linear-gradient(50deg, #283a95 0%, #9d3f95 46%, #b48b3f 100%);
     border-bottom: 1px solid var(--border-color);
@@ -54,7 +50,8 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.nav-brand img{
+
+.nav-brand img {
     width: 8vw;
     height: auto;
 }
@@ -91,7 +88,6 @@ body {
     color: var(--text-primary);
 }
 
-/* Search Section */
 .search-section {
     background-color: rgba(255, 255, 255, 0.077);
     padding: var(--spacing-lg) 0;
@@ -195,12 +191,10 @@ body {
     background-color: var(--accent-blue-hover);
 }
 
-/* Main Content */
 .main-content {
     padding: var(--spacing-xl) 0;
 }
 
-/* User Grid */
 .user-grid {
     display: grid;
     gap: var(--spacing-lg);
@@ -333,7 +327,6 @@ body {
     transform: translateY(-1px);
 }
 
-/* Pagination */
 .pagination-section {
     display: flex;
     justify-content: center;
@@ -378,7 +371,6 @@ body {
     cursor: not-allowed;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 var(--spacing-md);
@@ -460,7 +452,6 @@ body {
     }
 }
 
-/* Focus states for accessibility */
 .login-btn:focus,
 .filter-select:focus,
 .search-input:focus,
@@ -471,7 +462,6 @@ body {
     outline-offset: 2px;
 }
 
-/* Smooth transitions */
 * {
     transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }

@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skill Swap Request - Skill Swap Platform</title>
     <link rel="stylesheet" href="screen5.css">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <!-- Back Link -->
             <div class="back-link">
                 <a href="screen4.html" class="back-btn">
                     <i class="fas fa-arrow-left"></i>
@@ -24,10 +20,8 @@
                 </a>
             </div>
             
-            <!-- Skill Swap Form -->
             <section class="swap-form-section">
                 <form class="swap-form" id="skillSwapForm">
-                    <!-- Offered Skills Dropdown -->
                     <div class="form-group">
                         <label for="offeredSkill" class="form-label">Choose one of your offered skills</label>
                         <div class="select-wrapper">
@@ -46,7 +40,6 @@
                         </div>
                     </div>
 
-                    <!-- Wanted Skills Dropdown -->
                     <div class="form-group">
                         <label for="wantedSkill" class="form-label">Choose one of their wanted skills</label>
                         <div class="select-wrapper">
@@ -65,7 +58,6 @@
                         </div>
                     </div>
 
-                    <!-- Message Textarea -->
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
                         <textarea 
@@ -78,7 +70,6 @@
                         ></textarea>
                     </div>
 
-                    <!-- Submit Button -->
                     <div class="form-actions">
                         <button type="submit" class="submit-btn">
                             <i class="fas fa-paper-plane"></i>
@@ -91,24 +82,15 @@
     </main>
 
     <script>
-        // Form submission handler
         document.getElementById('skillSwapForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
-            
-            // Here you would typically send the data to your backend
             console.log('Skill swap request:', data);
-            
-            // Show success message (you can customize this)
             alert('Your skill swap request has been submitted successfully!');
-            
-            // Optionally reset the form
             this.reset();
         });
 
-        // Add custom styling for select dropdowns
         document.querySelectorAll('.form-select').forEach(select => {
             select.addEventListener('change', function() {
                 if (this.value) {

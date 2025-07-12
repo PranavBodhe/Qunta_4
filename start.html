@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,9 @@
 
 <body>
     <div class="container">
-        <form>
+
+        <!-- ✅ LOGIN FORM -->
+        <form method="POST" action="login.php">
             <div class="form-box">
                 <h1>LOGIN</h1>
                 <div class="underline"></div>
@@ -29,11 +30,13 @@
                 </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="register-link">
-                    <p>dont have an account?<a onclick="reg()" href="#">Register</a></p>
+                    <p>Don't have an account? <a onclick="reg()" href="#">Register</a></p>
                 </div>
             </div>
         </form>
-        <form method="POST" name="google-sheet" id="myform">
+
+        <!-- ✅ SIGN UP FORM -->
+        <form method="POST" action="register.php" id="myform">
             <div class="form-box2" id="fb2">
                 <h1>SIGN UP</h1>
                 <div class="underline"></div>
@@ -66,18 +69,18 @@
                     <error id="tell" class="er"></error>
                 </div>
                 <div class="rem-for">
-                    <label><input type="checkbox" required>agree to-</label>
+                    <label><input type="checkbox" required>Agree to-</label>
                     <a href="#">terms and conditions</a>
                 </div>
-                <button type="submit" class="btn2" disabled>Sign up</button>
+                <button type="submit" class="btn2">Sign up</button>
+
                 <div class="login-link">
-                    <p>already have an account?<a onclick="log()" href="#">login</a></p>
+                    <p>Already have an account? <a onclick="log()" href="#">Login</a></p>
                 </div>
             </div>
         </form>
-    </dev>
+    </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>

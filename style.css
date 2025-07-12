@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background-image: url(bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.form-box {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    width: 380px;
+    height: 400px;
+    position: relative;
+    margin: 6% auto;
+    background: #793a9080;
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.5);
+    visibility: visible;
+    transition: visibility 0.1s;
+}
+.open-form-box {
+    visibility: hidden;
+}
+
+.form-box2 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    width: 380px;
+    height: 510px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 40%;
+    left: 80%;
+    margin: 6% auto;
+    background: #793a9080;
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: -2px 2px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s, left 0.4s;
+    visibility: hidden;
+}
+
+.open-form-box2{
+    visibility: visible;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+}
+.form-box h1 {
+    font-size: 60px;
+    background-image: linear-gradient(43deg ,#415BD0 0%, #CB50C0 46%, #FFCC70 100%);
+    background-clip: "";
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.form-box .underline {
+    width: 45px;
+    height: 5px;
+    background: blanchedalmond;
+    border-radius: 2px;
+    margin: 10px auto 50px auto;
+}
+.form-box2 h1 {
+    font-size: 60px;
+    background-image: linear-gradient(43deg ,#415BD0 0%, #CB50C0 46%, #FFCC70 100%);
+    background-clip:""; 
+    -webkit-background-clip: text;
+    color: transparent;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.form-box2 .underline {
+    width: 45px;
+    height: 5px;
+    background: blanchedalmond;
+    border-radius: 2px;
+    margin: 10px auto 50px auto;
+}
+
+.form-box .input_field {
+    position: relative;
+    background: transparent;
+    margin: 25px;
+}
+
+.form-box .input_field input {
+    height: 35px;
+    width: 250px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.form-box .input_field input::placeholder {
+    color: #ffff;
+    font-size: 15px;
+}
+
+.form-box .input_field i {
+    position: relative;
+    right: 40px;
+    top: 5px;
+    font-size: 27px;
+    color: #ffffff;
+}
+.form-box2 .input_field {
+    position: relative;
+    background: transparent;
+    margin: 10px;
+    padding-left: 40px;
+    bottom: 4%;
+}
+
+.form-box2 .input_field input {
+    height: 35px;
+    width: 250px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+}
+
+.form-box2 .input_field input::placeholder {
+    color: #ffff;
+    font-size: 15px;
+}
+
+.form-box2 .input_field i {
+    position: relative;
+    right: 50px;
+    top: 5px;
+    font-size: 27px;
+    color: #ffffff;
+}
+#hide{
+    display: none;
+}
+.form-box .rem-for {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: -15px 5px 15px;
+    color: #fff;
+}
+.form-box2 .rem-for {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    margin:5px;
+    color: #fff;
+}
+
+.rem-for label input {
+    accent-color: #ffffff;
+    margin-right: 5px;
+}
+
+.rem-for a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.rem-for a:hover {
+    text-decoration: underline;
+}
+
+.form-box .btn {
+    width: 75%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 20px;
+    background-image: linear-gradient(43deg ,#415BD0 0%, #CB50C0 46%, #FFCC70 100%);
+    color: #fff;
+    transition: none;
+}
+.form-box .btn:hover{
+    background: #fff;
+    color: #CB50C0;
+}
+
+.form-box .register-link {
+    font-size: 15px;
+    margin: 4.5px;
+    color: #fff;
+}
+
+.form-box .register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-box .register-link p a:hover {
+    text-decoration: underline;
+}
+
+.form-box2 .btn2 {
+    width: 75%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 20px;
+    background-image: linear-gradient(43deg ,#415BD0 0%, #CB50C0 46%, #FFCC70 100%);
+    color: #ffffff;
+    transition: none;
+}
+.form-box2 .btn2:hover{
+    background: #fff;
+    color: #CB50C0;
+}
+
+.form-box2 .login-link {
+    font-size: 15px;
+    margin: 4.5px;
+    color: #fff;
+}
+
+.form-box2 .login-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-box2 .login-link p a:hover {
+    text-decoration: underline;
+}
+
+.form-box2 #tell{
+    position: absolute;
+    bottom: 21%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 14px;
+    font-weight: 500;
+}

@@ -5,26 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Requests - Skill Swap Platform</title>
     <link rel="stylesheet" href="Screen6.css">
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Header -->
+
     <header class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h1>Skill Swap Platform</h1>
+                <img src="logo.png" alt="">
             </div>
             <nav class="nav-menu">
-                <a href="screen1afterlog.html" class="nav-link">Home</a>
+                <a href="Screen6.html" class="nav-link">Swap request</a>
+                <a href="#" class="nav-link active">Home</a>
                 <div class="profile-icon">
                     <i class="fas fa-user-circle"></i>
                 </div>
             </nav>
         </div>
     </header>
-
+    <!-- Status Filter Section -->
     <section class="filter-section">
         <div class="container">
             <div class="status-filter">
@@ -40,9 +45,12 @@
         </div>
     </section>
 
+    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
+            <!-- Requests Grid -->
             <section class="requests-grid">
+                <!-- Request Card 1 - Pending -->
                 <div class="request-card">
                     <div class="request-profile">
                         <div class="profile-photo">
@@ -74,6 +82,7 @@
                     </div>
                 </div>
 
+                <!-- Request Card 2 - Rejected -->
                 <div class="request-card">
                     <div class="request-profile">
                         <div class="profile-photo">
@@ -105,6 +114,7 @@
                 </div>
             </section>
 
+            <!-- Pagination -->
             <section class="pagination-section">
                 <div class="pagination">
                     <button class="page-btn page-prev" disabled>
@@ -122,57 +132,74 @@
     </main>
 
     <script>
+        // Status filter functionality
         document.getElementById('statusFilter').addEventListener('change', function() {
             const selectedStatus = this.value;
             console.log('Filtering by status:', selectedStatus);
+            
+            // Here you would implement the actual filtering functionality
             if (selectedStatus) {
-                alert(`Filtering requests by status: "${selectedStatus}"`);
+                alert(Filtering requests by status: "${selectedStatus}");
             }
         });
 
+        // Request action handlers
         document.querySelectorAll('.action-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const action = this.getAttribute('data-action');
                 const requestCard = this.closest('.request-card');
                 const requesterName = requestCard.querySelector('.requester-name').textContent;
-
+                
                 switch(action) {
                     case 'accept':
-                        if (confirm(`Accept request from ${requesterName}?`)) {
+                        if (confirm(Accept request from ${requesterName}?)) {
+                            // Update status to accepted
                             const statusValue = requestCard.querySelector('.status-value');
                             statusValue.textContent = 'Accepted';
                             statusValue.className = 'status-value accepted';
+                            
+                            // Update buttons
                             const actionsDiv = this.parentElement;
                             actionsDiv.innerHTML = '<button class="action-btn view-btn" data-action="view">View Details</button>';
-                            alert(`Request from ${requesterName} accepted!`);
+                            
+                            alert(Request from ${requesterName} accepted!);
                         }
                         break;
                     case 'reject':
-                        if (confirm(`Reject request from ${requesterName}?`)) {
+                        if (confirm(Reject request from ${requesterName}?)) {
+                            // Update status to rejected
                             const statusValue = requestCard.querySelector('.status-value');
                             statusValue.textContent = 'Rejected';
                             statusValue.className = 'status-value rejected';
+                            
+                            // Update buttons
                             const actionsDiv = this.parentElement;
                             actionsDiv.innerHTML = '<button class="action-btn view-btn" data-action="view">View Details</button>';
-                            alert(`Request from ${requesterName} rejected.`);
+                            
+                            alert(Request from ${requesterName} rejected.);
                         }
                         break;
                     case 'view':
-                        alert(`Viewing details for request from ${requesterName}`);
+                        alert(Viewing details for request from ${requesterName});
                         break;
                 }
             });
         });
 
+        // Pagination functionality
         document.querySelectorAll('.page-number').forEach(btn => {
             btn.addEventListener('click', function() {
+                // Remove active class from all page numbers
                 document.querySelectorAll('.page-number').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
                 this.classList.add('active');
+                
                 const pageNumber = this.textContent;
                 console.log('Navigating to page:', pageNumber);
             });
         });
 
+        // Previous/Next pagination
         document.querySelector('.page-prev').addEventListener('click', function() {
             const currentActive = document.querySelector('.page-number.active');
             const prevPage = currentActive.previousElementSibling;

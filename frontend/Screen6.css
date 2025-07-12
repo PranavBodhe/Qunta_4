@@ -1,28 +1,25 @@
-
+/* CSS Variables for consistent theming */
 :root {
     background-image: linear-gradient(43deg, #3c54c0 0%, #aa42a1 46%, #a58549 100%);
-    --text-primary: #1d2124;
-    --text-secondary: #fafafa;
-    --text-muted: #adb5bd;
-    --border-color: #dee2e6;
-    --border-light: #ced4da;
+    --text-primary: #ffffff;
+    --text-secondary: #fbfbfb;
+    --text-muted: #ffffff;
+    --border-color: #dddddd;
+    --border-light: #cccccc;
     --accent-teal: #20b2aa;
     --accent-teal-hover: #1e9e96;
     --accent-blue: #4a90e2;
     --accent-blue-hover: #357abd;
-    --status-pending: #ffc107;
-    --status-accepted: #28a745;
-    --status-rejected: #dc3545;
-    --status-completed: #17a2b8;
     --border-radius: 8px;
     --border-radius-lg: 12px;
     --spacing-xs: 4px;
     --spacing-sm: 8px;
+    --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
     --spacing-xxl: 48px;
-    
 }
+
 
 /* Reset and base styles */
 * {
@@ -41,7 +38,7 @@ body {
 
 /* Navigation Header */
 .navbar {
-    background-color: var(--bg-darker);
+    background-image: linear-gradient(50deg, #283a95 0%, #9d3f95 46%, #b48b3f 100%);
     border-bottom: 1px solid var(--border-color);
     padding: var(--spacing-md) 0;
     position: sticky;
@@ -58,10 +55,9 @@ body {
     align-items: center;
 }
 
-.nav-brand h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
+.nav-brand img {
+    width: 8vw;
+    height: auto;
 }
 
 .nav-menu {
@@ -82,7 +78,7 @@ body {
 .nav-link:hover,
 .nav-link.active {
     color: var(--text-primary);
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .profile-icon {
@@ -95,6 +91,7 @@ body {
 .profile-icon:hover {
     color: var(--text-primary);
 }
+
 
 /* Filter Section */
 .filter-section {
@@ -159,7 +156,7 @@ body {
 }
 
 .request-card {
-    background-color: var(--bg-card);
+    background-image: linear-gradient(50deg, #cdcdcd96 0%, #c9c7c76e 46%, #9d9d9daa 100%);
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-lg);
@@ -227,7 +224,7 @@ body {
 
 .skill-offered,
 .skill-wanted {
-    background-color: #e9ecef;
+    background-color: #454545;
     color: var(--text-primary);
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 15px;
